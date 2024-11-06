@@ -6,12 +6,7 @@ A simple and interactive Todo List application built with **React** and **Redux*
 - [Demo](#demo)
 - [Features](#features)
 - [Setup Instructions](#setup-instructions)
-- [Project Structure](#project-structure)
-- [Scripts](#scripts)
-- [Technologies Used](#technologies-used)
-- [Redux Structure](#redux-structure)
-- [Tailwind CSS Configuration](#tailwind-css-configuration)
-- [Contributing](#contributing)
+
 
 ## Demo
 [Link to Demo or Screenshot Placeholder]
