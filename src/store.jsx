@@ -7,6 +7,8 @@ const initialstate = {
   task: [],
 };
 
+export const store = createStore(taskReducer);
+
 const taskReducer = (state = initialstate, action) => {
   switch (action.type) {
     case ADD_TASK:
@@ -29,11 +31,6 @@ const taskReducer = (state = initialstate, action) => {
   }
 };
 
-export const store = createStore(taskReducer);
-console.log(store);
-
-console.log("initial state ", store.getState());
-
 export const addTask = (data) => {
   return { type: ADD_TASK, payload: { data } };
 };
@@ -41,12 +38,3 @@ export const addTask = (data) => {
 export const deleteTask = (id) => {
   return { type: DELETE_TASK, payload: id };
 };
-
-store.dispatch(addTask("hey addtask function added"));
-store.dispatch(deleteTask(1));
-
-// console.log("updated state:", store.getState());
-// store.dispatch({ type: ADD_TASK, payload: "hii there, this is 2nd payload" });
-// console.log("updated state:", store.getState());
-// store.dispatch({ type: DELETE_TASK, payload: 1 });
-// console.log("deleted state:", store.getState());
