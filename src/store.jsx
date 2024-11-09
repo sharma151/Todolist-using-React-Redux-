@@ -7,8 +7,6 @@ const initialstate = {
   task: [],
 };
 
-export const store = createStore(taskReducer);
-
 const taskReducer = (state = initialstate, action) => {
   switch (action.type) {
     case ADD_TASK:
@@ -30,6 +28,8 @@ const taskReducer = (state = initialstate, action) => {
       return state;
   }
 };
+
+export const store = createStore(taskReducer);
 
 export const addTask = (data) => {
   return { type: ADD_TASK, payload: { data } };
